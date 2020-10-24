@@ -2,6 +2,13 @@ var path = require("path");
 var fs = require("fs");
 
 module.exports = function (app) {
+    app.get("/api/notes", function(req, res) {
+        fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", function(error, response) {
+            if (error) throw error;
+            let noteListItems = JSON.parse(response);
+            return res.send(noteListItems);
+        })
+    })
     app.post("/api/notes", function(req, res) {
         fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", function(error, response) {
             if (error) throw error;
@@ -20,11 +27,5 @@ module.exports = function (app) {
             });
         });
     })
-    app.get("/api/notes", function(req, res) {
-        fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", function(error, response) {
-            if (error) throw error;
-            let noteListItems = JSON.parse(response);
-            
-        })
-    })
+    
 }
