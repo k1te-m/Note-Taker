@@ -20,4 +20,11 @@ module.exports = function (app) {
             });
         });
     })
+    app.get("/api/notes", function(req, res) {
+        fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", function(error, response) {
+            if (error) throw error;
+            let noteListItems = JSON.parse(response);
+            
+        })
+    })
 }
