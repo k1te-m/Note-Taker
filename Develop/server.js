@@ -12,6 +12,7 @@ app.use(express.static("public"));
 // Routes
 
 require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
 
 // Set Server to Listen
 app.listen(PORT, function() {
