@@ -6,7 +6,7 @@ module.exports = function (app) {
         fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", function(error, response) {
             if (error) throw error;
             let noteListItems = JSON.parse(response);
-            return res.send(noteListItems);
+            res.send(noteListItems);
         })
     })
     app.post("/api/notes", function(req, res) {
