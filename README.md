@@ -23,7 +23,8 @@
 
   *Examples of project use:*
 
-  Will update.
+  ![DEMO](/public/assets/demo.png)
+  ![DEMOGIF](/public/assets/demogif)
 
   ## Contributing
 
