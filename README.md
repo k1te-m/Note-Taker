@@ -17,7 +17,7 @@
     
   *Steps required to install package:* 
     
-  To work on the application as a developer, you may fork this repo to your account and clone accordingly. To install all necessary dependencies utilize 
+  To work on the application as a developer, you may fork this repo to your account and clone accordingly. To install all necessary dependencies utilize:
   
   ```
   npm i
