@@ -36,7 +36,7 @@ module.exports = function (app) {
     app.get("/api/notes", function (req, res) {
       res.json(notes);
     });
-
+    // Get Method to display specific note for given id
     app.get("/api/notes/:id", function(req, res) {
       res.json(notes[req.params.id]);
     })
