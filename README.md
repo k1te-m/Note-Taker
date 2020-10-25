@@ -17,9 +17,13 @@
     
   *Steps required to install package:* 
     
-  All dependencies included in the package.json file. You may utilize npm i prior to running the application. To start the server, you may use node or nodemon and the server.js file.
+  To work on the application as a developer, you may fork this repo. All dependencies included in the package.json file. You may utilize npm i prior to running the application. To start the server, you may use node or nodemon and the server.js file.
 
   ## Usage
+  
+  To use the application as a user please utilize the below Heroku link:
+  
+  [Note-Taker Heroku](https://dry-sierra-97951.herokuapp.com/)
 
   *Examples of project use:*
 
