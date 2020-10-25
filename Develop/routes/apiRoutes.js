@@ -15,7 +15,7 @@ module.exports = function (app) {
 
     app.post("/api/notes", function (req, res) {
       const noteAdded = req.body;
-      const noteID = notes.length + 1;
+      const noteID = notes.length;
       const newNote = {
         id: noteID,
         title: noteAdded.title,
@@ -34,16 +34,21 @@ module.exports = function (app) {
       );
     });
 
-    // app.delete("/api/notes/:id", function(req, res) {
-    //   let noteID = req.params.id;
+    app.delete("/api/notes/:id", function (req, res) {
+      let noteID = req.params.id;
+      
+      notes.splice(noteID, 1);
 
-    //   const newNotes = notes.filter(note => note.id != noteID);
-    //   fs.writeFile(path.join(__dirname, "../db/db.json"), JSON.stringify(newNotes, null, 2), function(error) {
-    //     if (error) throw error;
-    //     console.log("Note deleted...");
-    //     res.end()
-    //   })
-    // })
+      fs.writeFile(
+        path.join(__dirname, "../db/db.json"),
+        JSON.stringify(notes, null, 2),
+        function (error) {
+          if (error) throw error;
+          console.log("Note deleted...");
+          res.end();
+        }
+      );
+    });
 
     
   });
