@@ -4,7 +4,7 @@
   ![GitHub](https://img.shields.io/github/license/k1te-m/Note-Taker)![GitHub top language](https://img.shields.io/github/languages/top/k1te-m/Note-Taker)
 
   ## Descripton
-  An application that allows the user to write, save, and delete notes. The application utilizes the express npm package to create a backend server to server up HTML pages, save, store, and retrieve note data from a JSON file database. 
+  An application that allows the user to write, save, and delete notes. The application utilizes the express npm package to create a backend server to serve up HTML pages, save, store, and retrieve note data from a JSON file database. 
 
   ## Table of Contents
   * [Installation](#installation)
